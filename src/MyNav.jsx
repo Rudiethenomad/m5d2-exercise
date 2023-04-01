@@ -22,3 +22,4 @@ function myNavBar() {
 }
 
 export default myNavBar;
+//export default App;
