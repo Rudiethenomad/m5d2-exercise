@@ -1,7 +1,7 @@
 //import React from 'react';
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Row } from 'react-bootstrap';
-
+import books from './scifi.json';
 
 
 class BookList extends Component {
@@ -27,10 +27,11 @@ class BookList extends Component {
 
   
         componentDidMount = async () => {
-            const resp = await fetch("./resources/scifi.json")
+            const resp = await fetch("./scifi.json")
             if(resp.ok){
                 const books = await resp.json()
             }
+           
                 this.setState({
                     books: books
                 })
