@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { Row } from 'react-bootstrap';
 import books from "./scifi.json";
 import BookListItem from "./BookListItem";
+import MyNav from "./MyNav";
+import MyFooter from "./MyFooter";
 
 
 let myInit = {method: 'GET',
@@ -30,11 +32,14 @@ class BookList extends Component {
            (
                 <>
                 <Row>
-                    <h1>{this.props.text}</h1>
+                    <MyNav />
                 </Row>
                 <Row>
                     {this.state.books.map(book => 
                         <BookListItem item={book} />)}
+                </Row>
+                <Row>
+                    <MyFooter />
                 </Row>
                 </>
             )
