@@ -1,7 +1,8 @@
 //import React from 'react';
 import React, { Component } from 'react';
 import { Row } from 'react-bootstrap';
-import books from './scifi.json';
+import books from "./scifi.json";
+import BookListItem from "./BookListItem";
 
 
 let myInit = {method: 'GET',
@@ -29,11 +30,11 @@ class BookList extends Component {
            (
                 <>
                 <Row>
-                    <h1>The Newest and the Greatest</h1>
+                    <h1>{this.props.text}</h1>
                 </Row>
                 <Row>
                     {this.state.books.map(book => 
-                    <img src={book.img} style={{width: "200px"}}/>)}
+                        <BookListItem item={book} />)}
                 </Row>
                 </>
             )
@@ -46,8 +47,8 @@ class BookList extends Component {
             }
                 this.setState({
                     books: books
-                })
+                });
             }
 
-
-export default BookList
+        }
+export default BookList;
