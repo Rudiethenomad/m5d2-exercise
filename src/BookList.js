@@ -6,7 +6,7 @@ import BookListItem from "./BookListItem";
 import MyNav from "./MyNav";
 import MyFooter from "./MyFooter";
 import { Fragment } from 'react';
-import { useState, useEffect } from "react";
+//import { useState, useEffect } from "react";
 
 
 
@@ -52,14 +52,17 @@ class BookList extends Component {
         componentDidMount = async () => {
             const resp = await fetch(myRequest)
             if(resp.ok){
-                const books = await resp.json()
+                const books = await resp.json();
+                console.log(books);
             }
                 this.setState({
                     books: books
+                  
                 })
                 //useEffect(componentDidMount dependencies);
             }
           
         }
+        
         //call after the rendering?
 export default BookList;
