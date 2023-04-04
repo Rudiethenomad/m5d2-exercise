@@ -50,7 +50,7 @@ class BookList extends Component {
                    ) }
                     
         componentDidMount = async () => {
-            const resp = await fetch(myRequest)
+            const resp = await fetch(myRequest, myInit)
             if(resp.ok){
                 const books = await resp.json();
                 console.log(books);
