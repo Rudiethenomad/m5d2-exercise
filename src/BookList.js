@@ -36,11 +36,11 @@ class BookList extends Component {
                 
                 <Fragment>
                 <Row>
-                    <MyNav />
+                     <MyNav />
                 </Row>
                 
                 <Row>
-                    {this.state.books.map(book => 
+                    {this.state.books.map((book) => 
                         <BookListItem item={book} />)}
                 </Row>
                 <Row>
