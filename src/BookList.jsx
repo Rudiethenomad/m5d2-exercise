@@ -5,6 +5,9 @@ import books from "./scifi.json";
 import BookListItem from "./BookListItem";
 import MyNav from "./MyNav";
 import MyFooter from "./MyFooter";
+import { Fragment } from 'react';
+import { useState, useEffect } from "react";
+
 
 
 let myInit = {method: 'GET',
@@ -28,12 +31,14 @@ class BookList extends Component {
     
 
     render(){
-        return 
-           (
-                <>
+        return (
+           
+                
+                <Fragment>
                 <Row>
                     <MyNav />
                 </Row>
+                
                 <Row>
                     {this.state.books.map(book => 
                         <BookListItem item={book} />)}
@@ -41,10 +46,9 @@ class BookList extends Component {
                 <Row>
                     <MyFooter />
                 </Row>
-                </>
-            )
-        }
-
+             </Fragment>
+                   ) }
+                    
         componentDidMount = async () => {
             const resp = await fetch(myRequest)
             if(resp.ok){
@@ -52,8 +56,10 @@ class BookList extends Component {
             }
                 this.setState({
                     books: books
-                });
+                })
+                //useEffect(componentDidMount dependencies);
             }
-
+          
         }
+        //call after the rendering?
 export default BookList;
