@@ -28,6 +28,18 @@ class BookList extends Component {
   state = {
         books: []
   }
+  componentDidMount = async () => {
+    const resp = await fetch(myRequest, myInit)
+    if(resp.ok){
+        const books = await resp.json();
+        console.log(books);
+    }
+        this.setState({
+            books: books
+          
+        })
+        //useEffect(componentDidMount dependencies);
+    }
     
 
     render(){
@@ -40,7 +52,7 @@ class BookList extends Component {
                 </Row>
                 
                 <Row>
-                    {this.state.books.map((book) => 
+                    {books.map((book) => 
                         <BookListItem item={book} />)}
                 </Row>
                 <Row>
@@ -49,20 +61,11 @@ class BookList extends Component {
              </Fragment>
                    ) }
                     
-        componentDidMount = async () => {
-            const resp = await fetch(myRequest, myInit)
-            if(resp.ok){
-                const books = await resp.json();
-                console.log(books);
-            }
-                this.setState({
-                    books: books
-                  
-                })
-                //useEffect(componentDidMount dependencies);
-            }
+       
           
         }
+
+
         
         //call after the rendering?
 export default BookList;

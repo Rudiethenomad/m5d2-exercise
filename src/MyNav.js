@@ -3,12 +3,12 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 //import BookList from './BookList';
 
-function myNavBar() {
+function MyNavBar() {
   return (
     <>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Books href="#home">Navbar</Navbar.Books>
+          <Navbar href="#hom">Navbar</Navbar>
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#About">About</Nav.Link>
@@ -22,5 +22,5 @@ function myNavBar() {
   );
 }
 
-export default myNavBar;
+export default MyNavBar;
 //export default App;
