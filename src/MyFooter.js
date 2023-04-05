@@ -7,7 +7,7 @@ function LastPartOfPage() {
       <Card.Body>
      
           <footer className="blockquote-footer">
-           
+           This is where the information goes!
           </footer>
         
       </Card.Body>

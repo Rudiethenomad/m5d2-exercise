@@ -38,13 +38,13 @@ class BookList extends Component {
             books: books
           
         })
-        //useEffect(componentDidMount dependencies);
+    
     }
     
 
     render(){
         return (
-           
+      
                 
                 <Fragment>
                 <Row>
@@ -53,7 +53,10 @@ class BookList extends Component {
                 
                 <Row>
                     {books.map((book) => 
-                        <BookListItem item={book} />)}
+                        <BookListItem item={book} />)
+                        
+                        
+                        }
                 </Row>
                 <Row>
                     <MyFooter />
@@ -67,5 +70,5 @@ class BookList extends Component {
 
 
         
-        //call after the rendering?
+   
 export default BookList;
