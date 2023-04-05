@@ -7,9 +7,9 @@ class MyBookCard extends Component {
   return (
    
     <Card className="col-md-4">
-      <Card.Img variant="top" src={this.props.BookList.img} />
+      <Card.Img variant="top" src={this.props.item.img} />
       <Card.Body>
-        <Card.Title>{this.props.BookListItem.Title}</Card.Title>
+        <Card.Title>{this.props.item.title}</Card.Title>
         <Card.Text>
          
         </Card.Text>
