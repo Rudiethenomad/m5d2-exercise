@@ -9,9 +9,9 @@ class MyBookCard extends Component {
     <Card className="col-md-4">
       <Card.Img variant="top" src={this.props.BookList.img} />
       <Card.Body>
-        <Card.Title>{this.props.BookList.Title}</Card.Title>
+        <Card.Title>{this.props.BookListItem.Title}</Card.Title>
         <Card.Text>
-          {this.props.BookList.categorey} - {this.props.bookInfo.price}
+         
         </Card.Text>
        
       </Card.Body>
